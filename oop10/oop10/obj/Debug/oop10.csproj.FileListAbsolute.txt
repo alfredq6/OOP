@@ -1,0 +1,7 @@
+C:\Users\mikci\source\repos\oop10\oop10\bin\Debug\oop10.exe.config
+C:\Users\mikci\source\repos\oop10\oop10\bin\Debug\oop10.exe
+C:\Users\mikci\source\repos\oop10\oop10\bin\Debug\oop10.pdb
+C:\Users\mikci\source\repos\oop10\oop10\obj\Debug\oop10.csprojAssemblyReference.cache
+C:\Users\mikci\source\repos\oop10\oop10\obj\Debug\oop10.csproj.CoreCompileInputs.cache
+C:\Users\mikci\source\repos\oop10\oop10\obj\Debug\oop10.exe
+C:\Users\mikci\source\repos\oop10\oop10\obj\Debug\oop10.pdb
