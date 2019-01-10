@@ -1,0 +1,7 @@
+C:\Users\mikci\source\repos\oop13\oop13\bin\Debug\oop13.exe.config
+C:\Users\mikci\source\repos\oop13\oop13\bin\Debug\oop13.exe
+C:\Users\mikci\source\repos\oop13\oop13\bin\Debug\oop13.pdb
+C:\Users\mikci\source\repos\oop13\oop13\obj\Debug\oop13.csprojAssemblyReference.cache
+C:\Users\mikci\source\repos\oop13\oop13\obj\Debug\oop13.csproj.CoreCompileInputs.cache
+C:\Users\mikci\source\repos\oop13\oop13\obj\Debug\oop13.exe
+C:\Users\mikci\source\repos\oop13\oop13\obj\Debug\oop13.pdb

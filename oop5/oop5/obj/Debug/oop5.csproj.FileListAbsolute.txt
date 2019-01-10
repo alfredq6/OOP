@@ -1,0 +1,7 @@
+C:\Users\mikci\source\repos\oop5\oop5\bin\Debug\oop5.exe.config
+C:\Users\mikci\source\repos\oop5\oop5\bin\Debug\oop5.exe
+C:\Users\mikci\source\repos\oop5\oop5\bin\Debug\oop5.pdb
+C:\Users\mikci\source\repos\oop5\oop5\obj\Debug\oop5.csprojAssemblyReference.cache
+C:\Users\mikci\source\repos\oop5\oop5\obj\Debug\oop5.csproj.CoreCompileInputs.cache
+C:\Users\mikci\source\repos\oop5\oop5\obj\Debug\oop5.exe
+C:\Users\mikci\source\repos\oop5\oop5\obj\Debug\oop5.pdb

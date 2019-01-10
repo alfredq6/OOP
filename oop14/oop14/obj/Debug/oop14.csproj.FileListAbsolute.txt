@@ -1,0 +1,11 @@
+C:\Users\mikci\source\repos\oop14\oop14\bin\Debug\oop14.exe.config
+C:\Users\mikci\source\repos\oop14\oop14\bin\Debug\oop14.exe
+C:\Users\mikci\source\repos\oop14\oop14\bin\Debug\oop14.pdb
+C:\Users\mikci\source\repos\oop14\oop14\bin\Debug\oop5.exe
+C:\Users\mikci\source\repos\oop14\oop14\bin\Debug\oop5.pdb
+C:\Users\mikci\source\repos\oop14\oop14\bin\Debug\oop5.exe.config
+C:\Users\mikci\source\repos\oop14\oop14\obj\Debug\oop14.csprojAssemblyReference.cache
+C:\Users\mikci\source\repos\oop14\oop14\obj\Debug\oop14.csproj.CoreCompileInputs.cache
+C:\Users\mikci\source\repos\oop14\oop14\obj\Debug\oop14.csproj.CopyComplete
+C:\Users\mikci\source\repos\oop14\oop14\obj\Debug\oop14.exe
+C:\Users\mikci\source\repos\oop14\oop14\obj\Debug\oop14.pdb

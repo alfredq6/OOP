@@ -1,0 +1,7 @@
+C:\Users\mikci\source\repos\oop9\oop9\bin\Debug\oop9.exe.config
+C:\Users\mikci\source\repos\oop9\oop9\bin\Debug\oop9.exe
+C:\Users\mikci\source\repos\oop9\oop9\bin\Debug\oop9.pdb
+C:\Users\mikci\source\repos\oop9\oop9\obj\Debug\oop9.csprojAssemblyReference.cache
+C:\Users\mikci\source\repos\oop9\oop9\obj\Debug\oop9.csproj.CoreCompileInputs.cache
+C:\Users\mikci\source\repos\oop9\oop9\obj\Debug\oop9.exe
+C:\Users\mikci\source\repos\oop9\oop9\obj\Debug\oop9.pdb

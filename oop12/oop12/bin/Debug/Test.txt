@@ -1,0 +1,16 @@
+Конструкторы класса StringEdit
+- StringEdit (String _str)
+
+Поля класса StringEdit :
+- str
+Методы класса StringEdit :
+
+- String 	 DeletingPunctuationMarks ()
+- String 	 NumberAdding ()
+- String 	 ToUpperCase (String param_str)
+- String 	 ToLowerCase ()
+- String 	 SpaceDeleting ()
+- String 	 ToString ()
+- Boolean 	 Equals (Object obj)
+- Int32 	 GetHashCode ()
+- Type 	 GetType ()

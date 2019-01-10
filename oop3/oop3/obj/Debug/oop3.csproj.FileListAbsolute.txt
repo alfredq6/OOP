@@ -1,0 +1,7 @@
+C:\Users\mikci\source\repos\oop3\oop3\bin\Debug\oop3.exe.config
+C:\Users\mikci\source\repos\oop3\oop3\bin\Debug\oop3.exe
+C:\Users\mikci\source\repos\oop3\oop3\bin\Debug\oop3.pdb
+C:\Users\mikci\source\repos\oop3\oop3\obj\Debug\oop3.csprojAssemblyReference.cache
+C:\Users\mikci\source\repos\oop3\oop3\obj\Debug\oop3.csproj.CoreCompileInputs.cache
+C:\Users\mikci\source\repos\oop3\oop3\obj\Debug\oop3.exe
+C:\Users\mikci\source\repos\oop3\oop3\obj\Debug\oop3.pdb

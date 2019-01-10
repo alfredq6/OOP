@@ -1,0 +1,7 @@
+C:\Users\mikci\source\repos\oop12\oop12\obj\Debug\oop12.csprojAssemblyReference.cache
+C:\Users\mikci\source\repos\oop12\oop12\obj\Debug\oop12.csproj.CoreCompileInputs.cache
+C:\Users\mikci\source\repos\oop12\oop12\bin\Debug\oop12.exe.config
+C:\Users\mikci\source\repos\oop12\oop12\bin\Debug\oop12.exe
+C:\Users\mikci\source\repos\oop12\oop12\bin\Debug\oop12.pdb
+C:\Users\mikci\source\repos\oop12\oop12\obj\Debug\oop12.exe
+C:\Users\mikci\source\repos\oop12\oop12\obj\Debug\oop12.pdb
