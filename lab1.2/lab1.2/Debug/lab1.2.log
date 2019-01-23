@@ -1,4 +1,0 @@
-﻿  Source.cpp
-c:\users\mikci\source\repos\lab1.2\lab1.2\source.cpp(15): warning C4715: mn: значение возвращается не при всех путях выполнения
-  lab1.2.vcxproj -> C:\Users\mikci\source\repos\lab1.2\Debug\lab1.2.exe
-  lab1.2.vcxproj -> C:\Users\mikci\source\repos\lab1.2\Debug\lab1.2.pdb (Partial PDB)
