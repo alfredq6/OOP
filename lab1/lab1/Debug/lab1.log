@@ -1,0 +1,7 @@
+﻿  Source.cpp
+c:\users\mikci\source\repos\lab1\lab1\source.cpp(9): warning C4005: M_PI: изменение макроопределения
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_math_defines.h(22): note: см. предыдущее определение "M_PI"
+c:\users\mikci\source\repos\lab1\lab1\source.cpp(11): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\mikci\source\repos\lab1\lab1\source.cpp(12): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  lab1.vcxproj -> C:\Users\mikci\source\repos\lab1\Debug\lab1.exe
+  lab1.vcxproj -> C:\Users\mikci\source\repos\lab1\Debug\lab1.pdb (Partial PDB)
