@@ -1,2 +1,0 @@
- from , math's mark 0, history's mark 0, biology's mark 0, average mark 0.
- from , math's mark 0, history's mark 0, biology's mark 0, average mark 0.
