@@ -1,0 +1,172 @@
+﻿<Window x:Class="_2lab4_5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2lab4_5"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:lib="clr-namespace:WpfControlLibrary1;assembly=WpfControlLibrary1"
+        mc:Ignorable="d"
+        Title="lab4-5" Height="530" Width="730" Icon="spiski.ico" MinWidth="250" MinHeight="240"
+        Name="mainWin" Cursor="default.cur" WindowStyle="None" AllowsTransparency="True">
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Click="_Copy_Click">
+                <MenuItem.Header>
+                    <Label Content="{DynamicResource Copy_ContextMenuItem}"/>
+                </MenuItem.Header>
+            </MenuItem>
+            <MenuItem Click="_Paste_Click">
+                <MenuItem.Header>
+                    <Label Content="{DynamicResource Paste_ContextMenuItem}"/>
+                </MenuItem.Header>
+            </MenuItem>
+            <Separator/>
+            <MenuItem Click="_Exit_Click">
+                <MenuItem.Header>
+                    <Label Content="{DynamicResource Exit_ContextMenuItem}"/>
+                </MenuItem.Header>
+            </MenuItem>
+        </ContextMenu>
+    </Window.ContextMenu>
+    <Window.CommandBindings>
+        <CommandBinding Command="local:SaveCommand._Save" Executed="_Save_Click"/>
+    </Window.CommandBindings>
+    <Grid ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="380*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="3"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="660*"/>
+            <ColumnDefinition Width="3"/>
+        </Grid.ColumnDefinitions>
+        <ContentControl Content="{DynamicResource UserCtrl}" Cursor="default.cur" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        <WrapPanel Grid.Row="1" Grid.Column="2" Style="{DynamicResource Menu}">
+            <Menu VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="190" Style="{DynamicResource Menu}">
+                <MenuItem Name="_File" Cursor="default.cur" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="60" BorderThickness="0" Template="{DynamicResource MenuItemControlTemplate}">
+                    <MenuItem.Header>
+                        <ContentControl Margin="12,0,0,0" Style="{DynamicResource ForegroundText}" Content="{DynamicResource File_MenuItem}"/>
+                    </MenuItem.Header>
+                    <MenuItem Name="_New" Margin="0,0,0,0" Cursor="default.cur" Height="30" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0" Click="_New_Click" Template="{DynamicResource MenuItemControlTemplate}">
+                        <MenuItem.Header>
+                            <ContentControl Margin="40,0,0,0" Style="{DynamicResource ForegroundText}" Content="{DynamicResource New_MenuItem}"/>
+                        </MenuItem.Header>
+                    </MenuItem>
+                    <MenuItem CommandParameter="_Save" Name="_Save" Height="30" Cursor="default.cur" Width="120" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="_Save_Click" Template="{DynamicResource MenuItemControlTemplate}">
+                        <MenuItem.Header>
+                            <ContentControl Margin="40,0,0,0" Style="{DynamicResource ForegroundText}" Content="{DynamicResource Save_MenuItem}"/>
+                        </MenuItem.Header>
+                    </MenuItem>
+                    <MenuItem Name="_Open" Height="30" Width="120" HorizontalAlignment="Left" Cursor="default.cur" BorderThickness="0" VerticalAlignment="Top" Click="_Open_Click" Template="{DynamicResource MenuItemControlTemplate}">
+                        <MenuItem.Header>
+                            <ContentControl Margin="37,0,0,0" Style="{DynamicResource ForegroundText}" Content="{DynamicResource Open_MenuItem}"/>
+                        </MenuItem.Header>
+                    </MenuItem>
+                    <MenuItem Name="LastDocs" Height="30" Width="120" HorizontalAlignment="Left" Cursor="default.cur" BorderThickness="0" VerticalAlignment="Top" Template="{DynamicResource MenuItemControlTemplate1}">
+                        <MenuItem.Header>
+                            <ContentControl Margin="12,0,0,0" Style="{DynamicResource ForegroundText}" Content="{DynamicResource LastDocs_MenuItem}"/>
+                        </MenuItem.Header>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Name="_Edit" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="65" Cursor="default.cur" BorderThickness="0" Template="{DynamicResource MenuItemControlTemplate}">
+                    <MenuItem.Header>
+                        <ContentControl Margin="12,0,0,0" Style="{DynamicResource ForegroundText}" Content="{DynamicResource Edit_MenuItem}"/>
+                    </MenuItem.Header>
+                    <MenuItem Name="_Copy" Height="30" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Cursor="default.cur" BorderThickness="0" Template="{DynamicResource MenuItemControlTemplate}" Click="_Copy_Click">
+                        <MenuItem.Header>
+                            <ContentControl Margin="40,0,0,0" Style="{DynamicResource ForegroundText}" Content="{DynamicResource Copy_MenuItem}"/>
+                        </MenuItem.Header>
+                    </MenuItem>
+                    <MenuItem Name="_Paste" Height="30" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0" Cursor="default.cur" Template="{DynamicResource MenuItemControlTemplate}" Click="_Paste_Click">
+                        <MenuItem.Header>
+                            <ContentControl Margin="40,0,0,0" Style="{DynamicResource ForegroundText}" Content="{DynamicResource Paste_MenuItem}"/>
+                        </MenuItem.Header>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="65" Cursor="default.cur" BorderThickness="0" Template="{DynamicResource MenuItemControlTemplate}">
+                    <MenuItem.Header>
+                        <ContentControl Style="{DynamicResource ForegroundText}" Content="{DynamicResource Styles_MenuItem}"/>
+                    </MenuItem.Header>
+                    <MenuItem Name="BlueViolet" Height="30" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Cursor="default.cur" BorderThickness="0" Template="{DynamicResource MenuItemControlTemplate}" Click="BlueViolet_Click">
+                        <MenuItem.Header>
+                            <ContentControl Style="{DynamicResource ForegroundText}" Content="{DynamicResource BlueViolet_MenuItem}"/>
+                        </MenuItem.Header>
+                    </MenuItem>
+                    <MenuItem Name="Red" Height="30" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0" Cursor="default.cur" Template="{DynamicResource MenuItemControlTemplate}" Click="Red_Click">
+                        <MenuItem.Header>
+                            <ContentControl Style="{DynamicResource ForegroundText}" Content="{DynamicResource Red_MenuItem}"/>
+                        </MenuItem.Header>
+                    </MenuItem>
+                    <MenuItem Name="Glamurious" Height="30" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0" Cursor="default.cur" Template="{DynamicResource MenuItemControlTemplate}" Click="Glamurious_Click">
+                        <MenuItem.Header>
+                            <ContentControl Style="{DynamicResource ForegroundText}" Content="{DynamicResource Glamurious_MenuItem}"/>
+                        </MenuItem.Header>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+            <ToggleButton Content="{StaticResource Bold_ToggleButton}" Name="BoldBut" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Unchecked" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Margin="20,0,0,0" FontFamily="Century Gothic" Style="{DynamicResource ToggleButtonStyle}" />
+            <ToggleButton Content="{StaticResource Italic_ToggleButton}" Name="ItalicBut" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Unchecked" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Margin="0,0,0,0" FontFamily="Century Gothic" FontStyle="Italic" Style="{DynamicResource ToggleButtonStyle}"/>
+            <ToggleButton Content="{StaticResource Underline_ToggleButton}" Name="UnderlineBut" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Unchecked"  FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Margin="0,0,0,0" FontFamily="Century Gothic" Style="{DynamicResource ToggleButtonStyle}"/>
+
+            <xctk:ColorPicker HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" Width="100" Height="30" SelectedColor="Black" SelectedColorChanged="ColorPicker_SelectedColorChanged" BorderBrush="#FF77ABE0"/>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,5,0,0" Text="14" Style="{DynamicResource ForegroundText}" Name="_SizeTxtBlock" FontFamily="Century Gothic"></TextBlock>
+            <Slider Maximum="30" Minimum="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="10,5,0,0" Name="_SizeSlider" Value="14" ValueChanged="Slider_ValueChanged" SmallChange="1" LargeChange="2" Style="{DynamicResource SliderStyle}"/>
+            <ComboBox Name="_FontFamily" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Margin="10,0,0,0" Width="100" SelectedIndex="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectionChanged="FontFamily_SelectionChanged" Style="{DynamicResource ComboBoxStyle}">
+                <ComboBoxItem Cursor="default.cur" Height="30" Width="130" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{DynamicResource ComboBoxItemStyle}">
+                    <Label Style="{DynamicResource ForegroundText}" FontSize="14" FontFamily="Times New Roman">Times New Roman</Label>
+                </ComboBoxItem>
+                <ComboBoxItem Cursor="default.cur" Height="30" Width="130" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{DynamicResource ComboBoxItemStyle}">
+                    <Label Style="{DynamicResource ForegroundText}" FontSize="14" FontFamily="Calibri">Calibri</Label>
+                </ComboBoxItem>
+                <ComboBoxItem Cursor="default.cur" Height="30" Width="130" FontFamily="Century Gothic" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{DynamicResource ComboBoxItemStyle}">
+                    <Label Style="{DynamicResource ForegroundText}" FontSize="14" FontFamily="Century Gothic">Century Gothic</Label>
+                </ComboBoxItem>
+                <ComboBoxItem Cursor="default.cur" Height="30" Width="130" FontFamily="USSR STENCIL" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{DynamicResource ComboBoxItemStyle}">
+                    <Label Style="{DynamicResource ForegroundText}" FontSize="14" FontFamily="USSR STENCIL">USSR STENCIL</Label>
+                </ComboBoxItem>
+                <ComboBoxItem Cursor="default.cur" Height="30" Width="130" FontFamily="Bicubik" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{DynamicResource ComboBoxItemStyle}">
+                    <Label Style="{DynamicResource ForegroundText}" FontSize="14" FontFamily="Bicubik">Bicubik</Label>
+                </ComboBoxItem>
+            </ComboBox>
+        </WrapPanel>
+        <RichTextBox Grid.ColumnSpan="2" Grid.Column="1" TextChanged="_RichTextBox_TextChanged" AllowDrop="True" Name="_RichTextBox" SpellCheck.IsEnabled="True" Language="en-ru" FontFamily="Times New Roman" Grid.Row="2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" FontSize="14" Block.LineHeight="6" UseLayoutRounding="False" ScrollViewer.CanContentScroll="True" IsDocumentEnabled="True" IsUndoEnabled="True" AcceptsTab="True" Cursor="select.cur">
+            <RichTextBox.InputBindings>
+                <KeyBinding Command="local:SaveCommand._Save" Key="S" Modifiers="Ctrl"/>
+            </RichTextBox.InputBindings>
+        </RichTextBox>
+        <ComboBox Background="White" Grid.Column="2" Grid.Row="1" Name="LanguageComboBox" SelectionChanged="Language_SelectionChanged" HorizontalAlignment="Right" VerticalAlignment="Top" Height="30" SelectedIndex="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ScrollViewer.CanContentScroll="True" IsSynchronizedWithCurrentItem="True" Style="{DynamicResource ComboBoxStyle}">
+            <ComboBoxItem Cursor="default.cur" Name="EN" Content="{StaticResource En_ComboBoxItem}" Style="{DynamicResource ComboBoxItemStyle}"/>
+            <ComboBoxItem Cursor="default.cur" Name="RU" Content="{StaticResource Ru_ComboBoxItem}" Style="{DynamicResource ComboBoxItemStyle}"/>
+        </ComboBox>
+        <WrapPanel Style="{DynamicResource Menu}" Orientation="Vertical" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Button HorizontalAlignment="Center" Height="23" Width="23" BorderThickness="0" Click="_New_Click" Style="{DynamicResource ButtonStyle1}">
+                <Button.ToolTip>
+                    <Label Content="{DynamicResource NewFileButton_ToolTip}"/>
+                </Button.ToolTip>
+                <Image Source="text-document.png"/>
+            </Button>
+            <Button HorizontalAlignment="Center" Height="20" BorderThickness="0" Width="20" Click="_Save_Click" Style="{DynamicResource ButtonStyle1}">
+                <Button.ToolTip>
+                    <Label Content="{DynamicResource SaveFileButton_ToolTip}"/>
+                </Button.ToolTip>
+                <Image Source="save.png"/>
+            </Button>
+            <Button HorizontalAlignment="Center" Height="23" Width="23" BorderThickness="0" Click="_Open_Click" Style="{DynamicResource ButtonStyle1}">
+                <Button.ToolTip>
+                    <Label Content="{DynamicResource OpenFileButton_ToolTip}"/>
+                </Button.ToolTip>
+                <Image Source="open-folder.png"/>
+            </Button>
+        </WrapPanel>
+        <Label MouseDown="Redo_MouseDown" Cursor="context.cur" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="25,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="{DynamicResource RightArrow}"/>
+        <Label MouseDown="Undo_MouseDown" Cursor="context.cur" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,0,25,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="{DynamicResource LeftArrow}"/> 
+        
+        <Label Grid.ColumnSpan="2" Grid.Column="1" Name="StatusStroke" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{DynamicResource ForegroundText}" Content="{DynamicResource Status_TextBlock}"/>
+    </Grid>
+</Window>

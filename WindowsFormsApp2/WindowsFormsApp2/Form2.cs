@@ -40,7 +40,6 @@ namespace WindowsFormsApp2
             }
             if (IsReady)
             {
-                
                 DialogResult = DialogResult.OK;
             }
         }

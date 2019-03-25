@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:_2lab4_5"
+                    xmlns:s="clr-namespace:WpfControlLibrary1;assembly=WpfControlLibrary1">
+    <Label x:Key="En_ComboBoxItem" FontFamily="Century Gothic" FontSize="14" Style="{DynamicResource ForegroundText}">EN</Label>
+    <Label x:Key="Ru_ComboBoxItem" FontFamily="Century Gothic" FontSize="14" Style="{DynamicResource ForegroundText}">RU</Label>
+    <TextBlock x:Key="Bold_ToggleButton" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource ForegroundText}">B</TextBlock>
+    <TextBlock x:Key="Italic_ToggleButton" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="1,0,0,0" Style="{DynamicResource ForegroundText}">I</TextBlock>
+    <TextBlock x:Key="Underline_ToggleButton" TextDecorations="Underline" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource ForegroundText}">U</TextBlock>
+
+</ResourceDictionary>

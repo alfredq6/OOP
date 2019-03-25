@@ -1,0 +1,153 @@
+﻿<UserControl x:Class="WpfControlLibrary1.UserControl2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfControlLibrary1"
+             mc:Ignorable="d" 
+             d:DesignHeight="530" d:DesignWidth="690" Name="userCtrl">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="500*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3"/>
+            <ColumnDefinition Width="690*"/>
+            <ColumnDefinition Width="3"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#FFE25454" HorizontalAlignment="Stretch" StrokeThickness="0" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
+        <Rectangle MouseDown="Title_MouseDown" Fill="#FFE25454" HorizontalAlignment="Stretch" Height="30" StrokeThickness="0" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"/>
+        <Label Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="40" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="X_MouseDown" Grid.Column="0" Grid.ColumnSpan="3">
+            <TextBlock Name="X" FontSize="18" Margin="0,0,0,0" FontFamily="Snap ITC" >X</TextBlock>
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="MouseMove">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetProperty="Background.Color">
+                                <ColorAnimation To="#FFC13030" Duration="0:0:0" AutoReverse="False"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetProperty="Foreground.Color" Storyboard.TargetName="X">
+                                <ColorAnimation To="White" AutoReverse="False" Duration="0:0:0"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetProperty="Background.Color">
+                                <ColorAnimation To="{x:Null}" Duration="0:0:0.2">
+                                    <ColorAnimation.EasingFunction>
+                                        <CircleEase EasingMode="EaseIn"/>
+                                    </ColorAnimation.EasingFunction>
+                                </ColorAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetProperty="Foreground.Color" Storyboard.TargetName="X">
+                                <ColorAnimation To="Black" AutoReverse="False" Duration="0:0:0.2"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
+        <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Name="UnMaxed" Visibility="Visible" MouseDown="Max_MouseDown" HorizontalAlignment="Right" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="40" Height="30" Margin="0,0,40,0">
+            <Rectangle Height="16" Width="16" Stroke="Black" StrokeThickness="2" Margin="0,3,0,0"></Rectangle>
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="MouseMove">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetProperty="Background.Color">
+                                <ColorAnimation To="White" AutoReverse="False" Duration="0:0:0"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetProperty="Background.Color">
+                                <ColorAnimation To="{x:Null}" AutoReverse="False" Duration="0:0:0.2"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Name="Maxed" Visibility="Hidden" MouseDown="Max_MouseDown" HorizontalAlignment="Right" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="40" Height="30" Margin="0,0,40,0">
+            <StackPanel>
+                <Rectangle Height="16" Width="16" Stroke="Black" StrokeThickness="2" Margin="8,0,0,0"></Rectangle>
+                <Rectangle Name="firstRect" Height="16" Width="16" Stroke="Black" StrokeThickness="2" Margin="0,-12,0,0" Fill="#FFE25454"></Rectangle>
+            </StackPanel>
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="MouseMove">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetProperty="Background.Color">
+                                <ColorAnimation To="White" AutoReverse="False" Duration="0:0:0"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetName="firstRect" Storyboard.TargetProperty="Fill.Color">
+                                <ColorAnimation To="White" Duration="0:0:0" AutoReverse="False"></ColorAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetProperty="Background.Color">
+                                <ColorAnimation To="{x:Null}" AutoReverse="False" Duration="0:0:0.2"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetName="firstRect" Storyboard.TargetProperty="Fill.Color">
+                                <ColorAnimation To="#FFE25454" Duration="0:0:0.2" AutoReverse="False"></ColorAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
+        <Label Grid.Row="0" MouseDown="Min_MouseDown" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Right" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="40" Height="30" Margin="0,0,80,0">
+            <Line X1="20" X2="0" Y1="20" Y2="20" Stroke="Black" StrokeThickness="3" Margin="0,-1,0,0"></Line>
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="MouseMove">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetProperty="Background.Color">
+                                <ColorAnimation To="White" Duration="0:0:0" AutoReverse="False"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetProperty="Background.Color">
+                                <ColorAnimation To="{x:Null}" Duration="0:0:0.2" AutoReverse="False"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
+        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Source="spiski.ico" Width="20" Height="20" Margin="3,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"></Image>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0">
+            <TextBlock Foreground="White">Lab6</TextBlock>
+        </Label>
+        <Rectangle Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"  x:Name="rectSizeSourth" MouseDown="rectSizeSourth_MouseDown"  Cursor="row-resize.cur" Fill="Transparent" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Height="2"/>
+        <Rectangle Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"  x:Name="rectSizeNorth" MouseDown="rectSizeNorth_MouseDown"  Cursor="row-resize.cur" Fill="Transparent" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="2"/>
+        <Rectangle Grid.Row="0" Grid.Column="2" Grid.RowSpan="2"  x:Name="rectSizeEast" MouseDown="rectSizeEast_MouseDown"  Cursor="col-resize.cur" Fill="Transparent" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+        <Rectangle Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"  x:Name="rectSizeWest" MouseDown="rectSizeWest_MouseDown"  Cursor="col-resize.cur" Fill="Transparent" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+        <Rectangle Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" x:Name="rectSizeNorthWest" MouseDown="rectSizeNorthWest_MouseDown"  Cursor="diag-resize2.cur" Fill="Transparent" VerticalAlignment="Top" HorizontalAlignment="Left" Width="5" Height="5" />
+        <Rectangle Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" x:Name="rectSizeNorthEast" MouseDown="rectSizeNorthEast_MouseDown"  Cursor="diag-resize1.cur" Fill="Transparent" VerticalAlignment="Top" HorizontalAlignment="Right" Width="5" Height="5" />
+        <Rectangle Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" x:Name="rectSizeSourthWest" MouseDown="rectSizeSourthWest_MouseDown"  Cursor="diag-resize1.cur" Fill="Transparent" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="5" Height="5" />
+        <Rectangle Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" x:Name="rectSizeSourthEast" MouseDown="rectSizeSourthEast_MouseDown"  Cursor="diag-resize2.cur" Fill="Transparent" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="5" Height="5" />
+    </Grid>
+</UserControl>
