@@ -1,0 +1,57 @@
+﻿<Window x:Class="_2lab8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2lab8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Name="DG1" Grid.ColumnSpan="2" ItemsSource="{Binding}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Inventory number" Binding="{Binding InventoryNumber}"/>
+                <DataGridTextColumn Header="Type" Binding="{Binding Type}"/>
+                <DataGridTextColumn Header="Weight"  Binding="{Binding Weight}"/>
+                <DataGridTextColumn Header="Price"  Binding="{Binding Price}"/>
+                <DataGridTextColumn Header="Producer"  Binding="{Binding Producer}"/>
+                <DataGridTextColumn Header="Image"  Binding="{Binding Image}"/>
+                <DataGridTextColumn Header="Image path"  Binding="{Binding ImagePath}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Visibility="Hidden" Name="DG2" Grid.ColumnSpan="2" ItemsSource="{Binding}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Producer" Binding="{Binding OrganisationName}"/>
+                <DataGridTextColumn Header="Country" Binding="{Binding Country}"/>
+                <DataGridTextColumn Header="Adress" Binding="{Binding Adress}"/>
+                <DataGridTextColumn Header="TelephoneNumber" Binding="{Binding TelephoneNumber}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ListBox Grid.Row="1" Grid.Column="0" x:Name="listBox"/>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="SaveBut" Grid.ColumnSpan="2" Content="Сохранить" FontSize="20" DockPanel.Dock="Bottom" Click="SaveBut_Click"/>
+            <Button x:Name="UpdateBut" Grid.ColumnSpan="2" Grid.Column="2" Content="Показать" FontSize="20" DockPanel.Dock="Bottom" Click="ShowBut_Click"/>
+            <Button x:Name="GetImageBut" Grid.ColumnSpan="2" Grid.Column="2" Grid.Row="1" Content="Получить изображение" FontSize="17" DockPanel.Dock="Bottom" Click="GetImageBut_Click"/>
+            <Button x:Name="NextBut" Grid.Row="1" Grid.Column="1" Content="Next" FontSize="20" DockPanel.Dock="Bottom" Click="NextBut_Click"/>
+            <Button x:Name="PrevBut" Grid.Row="1" Content="Prev" FontSize="20" DockPanel.Dock="Bottom" Click="PrevBut_Click"/>
+        </Grid>
+    </Grid>
+</Window>

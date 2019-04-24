@@ -1,0 +1,47 @@
+﻿<Window x:Class="_2lab9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2lab9"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="DG1" Grid.Column="1" ItemsSource="{Binding}"/>
+
+        <DataGrid x:Name="DG2" Grid.Column="1" Grid.Row="1" ItemsSource="{Binding}"/>
+
+        <Button x:Name="SaveEmployees" Click="SaveEmployees_Click" Height="40" Width="70" Content="Сохранить" HorizontalAlignment="Left" Margin="316,184,0,10"/>
+        <Button x:Name="ShowEmployees" Click="ShowEmployees_Click" Height="40" Width="70" Margin="241,184,0,10" Content="Показать" HorizontalAlignment="Left"/>
+        <Button x:Name="SearchEmployee" Click="SearchEmployee_Click" Width="70" Content="Поиск" HorizontalAlignment="Left" Margin="236,10,0,196"/>
+        <TextBox x:Name="EmpNameTxtBox" Height="30" Width="100" Margin="221,47,75,157"/>
+        <TextBox x:Name="EmpAgeTxtBox" Height="30" Width="100" Margin="221,95,75,109"/>
+        <Label Content="Имя" Margin="179,49,180,157"/>
+        <Label Content="Возраст" Margin="159,97,180,109"/>
+        <Label Content="Сортировка" Margin="48,0,263,208"/>
+        <Button x:Name="SortByName" Click="SortByName_Click" Margin="48,31,263,175" Content="По имени"/>
+        <Button x:Name="SortByAge" Click="SortByAge_Click" Margin="48,64,263,142" Content="По возрасту"/>
+        <Button x:Name="SortByWage" Click="SortByWage_Click" Margin="48,97,263,109" Content="По ЗП"/>
+        <Button x:Name="SortByPost" Click="SortByPost_Click" Margin="48,130,263,76" Content="По должности"/>
+
+        <Button x:Name="SaveCompanies" Click="SaveCompanies_Click" Grid.Row="1" Height="40" Width="70" Content="Сохранить" HorizontalAlignment="Left" Margin="316,184,0,10"/>
+        <Button x:Name="ShowCompanies" Click="ShowCompanies_Click" Grid.Row="1" Height="40" Width="70" Margin="241,184,0,10" Content="Показать" HorizontalAlignment="Left"/>
+        <Button x:Name="SearchCompanies" Click="SearchCompanies_Click" Grid.Row="1" Width="70" Content="Поиск" HorizontalAlignment="Left" Margin="236,10,0,196"/>
+        <TextBox x:Name="CompanyNameTxtBlock" Grid.Row="1" Height="30" Width="100" Margin="221,47,75,157"/>
+        <TextBox x:Name="CompanyCostTxtBlock" Grid.Row="1" Height="30" Width="100" Margin="221,95,75,109"/>
+        <Label Grid.Row="1" Content="Название" Margin="159,49,175,157"/>
+        <Label Grid.Row="1" Content="Цена" Margin="179,97,175,109"/>
+        <Label Grid.Row="1" Content="Сортировка" Margin="48,0,263,208"/>
+        <Button x:Name="SortByCompName" Click="SortByCompName_Click" Grid.Row="1" Margin="48,31,263,175" Content="По названию"/>
+        <Button x:Name="SortByCost" Click="SortByCost_Click" Grid.Row="1" Margin="48,64,263,142" Content="По состоянию"/>
+        <Button x:Name="SortByAdress" Click="SortByAdress_Click" Grid.Row="1" Margin="57,97,254,109" Content="По адресу"/>
+    </Grid>
+</Window>
