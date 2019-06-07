@@ -1,0 +1,1277 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="map" style="width: 100%; height: 100%"></div>
+    <script>
+      function initMap() {
+      	var myLatLng = {lat: 53.889713,lng: 27.558095};
+        	var map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          zoom: 14
+        });
+          var image = 'https://samuraev228.000webhostapp.com/currentPositionIcon.png';
+
+//curPosMarker
+
+          var BelarusNaft = 'https://samuraev228.000webhostapp.com/belarusNaftMarker.png';
+          var A100 = 'https://samuraev228.000webhostapp.com/A100.png';
+          var Triple = 'https://samuraev228.000webhostapp.com/Triple.png';
+          var UnitedCompany = 'https://samuraev228.000webhostapp.com/UnitedCompany.png';
+          var SlavNeft = 'https://samuraev228.000webhostapp.com/Slavneft.png';
+          var Lucoil = 'https://samuraev228.000webhostapp.com/Lucoil.png';
+          var Gazprom = 'https://samuraev228.000webhostapp.com/Gazprom.png';
+          var RusNeft = 'https://samuraev228.000webhostapp.com/Rusneft.png';
+          var MinskOblGaz = 'https://samuraev228.000webhostapp.com/Minskoblgaz.png';
+          var Minskgaz = 'https://samuraev228.000webhostapp.com/MinskGaz.png';
+
+          // ул. Тростенецкая д.20а
+          var UC_11 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.878403, lng: 27.588462},
+          icon: UnitedCompany
+        });
+
+          // пр-т Держинского д.65
+          var UC_1 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.869690, lng: 27.492717},
+          icon: UnitedCompany
+        });
+
+          // пр-т Держинского д.132
+          var UC_2 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.844396, lng: 27.470403},
+          icon: UnitedCompany
+        });
+
+          // пр-т Будславская д.5
+          var UC_9 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.960080, lng: 27.538102},
+          icon: UnitedCompany
+        });
+
+          // Логойский тракт д.46
+          var UC_3 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.959808, lng: 27.629648},
+          icon: UnitedCompany
+        });
+
+          // пр-т Партизанский д.178а
+          var UC_7 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.852413, lng: 27.695361},
+          icon: UnitedCompany
+        });
+
+          // ул. Брилевская д.28
+          var Lucoil4 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.874476, lng: 27.528178},
+          icon: Lucoil
+        });
+
+          // Тростенецкая д.27
+          var Lucoil5 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.877999, lng: 27.596292},
+          icon: Lucoil
+        });
+
+          // ул. Кижеватова д.48
+          var Lucoil67 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.858653, lng: 27.537624},
+          icon: Lucoil
+        });
+
+          // ул. Кижеватова д.88
+          var Lucoil65 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.838164, lng: 27.532279},
+          icon: Lucoil
+        });
+
+          // пр-т Держинского д.165
+          var Lucoil64 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.840702, lng: 27.468281},
+          icon: Lucoil
+        });
+
+          // ул. Южная д.39
+          var Lucoil69 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.913369, lng: 27.683087},
+          icon: Lucoil
+        });
+
+          // пр-т Независимости д.169а
+          var Lucoil61 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.944155, lng: 27.668865},
+          icon: Lucoil
+        });
+
+          // ул. пр-т Партизанский д.8а
+          var A100_7 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.880878, lng: 27.597502},
+          icon: A100
+        });
+
+          // ул. Харьковская д.81
+          var A100_6 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.894628, lng: 27.499021},
+          icon: A100
+        });
+
+          // ул. Казинца д.133
+          var A100_16 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.837942, lng: 27.514178},
+          icon: A100
+        });
+
+          // ул. Промышленная д.2б
+          var A100_15 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.852293, lng: 27.675832},
+          icon: A100
+        });
+
+          // Долгиновский тракт д.190
+          var A100_20 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.968147, lng: 27.532116},
+          icon: A100
+        });
+
+          // п. Валерьяново ул. Боровая 7
+          var A100_2 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.964363, lng: 27.643685},
+          icon: A100
+        });
+
+          // тракт Смиловичский
+          var A100_18 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.832237, lng: 27.736012},
+          icon: A100
+        });
+
+          // ул. Тимирязева д.66а
+          var BelNaft26 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.922119, lng: 27.514203},
+          icon: BelarusNaft
+        });
+
+          // ул. Владислава Сырокомли д.9
+          var BelNaft27 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.843002, lng: 27.559132},
+          icon: BelarusNaft
+        });
+
+          // ул. Серова д.2
+          var BelNaft3 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.842863, lng: 27.535605},
+          icon: BelarusNaft
+        });
+
+          // МКАД 22км слева
+          var BelNaft77 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.836543, lng: 27.513249},
+          icon: BelarusNaft
+        });
+
+          // ул. Уборевича д.105
+          var BelNaft13 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.833915, lng: 27.603004},
+          icon: BelarusNaft
+        });
+
+          // ул. Тимирязева д.106
+          var BelNaft53 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.932071, lng: 27.473776},
+          icon: BelarusNaft
+        });
+
+          // Колядичи, ул. Бабушкина
+          var BelNaft18 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.827954, lng: 27.578975},
+          icon: BelarusNaft
+        });
+
+          // МКАД 16км слева
+          var BelNaft89 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.831020, lng: 27.607375},
+          icon: BelarusNaft
+        });
+
+          // пр-д Масюковщина д.17
+          var BelNaft50 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.926235, lng: 27.447286},
+          icon: BelarusNaft
+        });
+
+          // пр-т Партизанский д.156а
+          var BelNaft8 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.859357, lng: 27.677077},
+          icon: BelarusNaft
+        });
+
+          // ул. Ваупшасова д.53
+          var BelNaft56 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.903094, lng: 27.686193},
+          icon: BelarusNaft
+        });
+
+          // P23 12км Мински р-н вблизи п. Сеница
+          var BelNaft58 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.812086, lng: 27.531612},
+          icon: BelarusNaft
+        });
+
+          // МКАД 223016 (13км слева)
+          var BelNaft81 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.837684, lng: 27.660398},
+          icon: BelarusNaft
+        });
+
+          // пр-т Партизанский д.166а
+          var BelNaft55 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.856973, lng: 27.684606},
+          icon: BelarusNaft
+        });
+
+          // Лагойский тракт д.49
+          var BelNaft6 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.961179, lng: 27.625302},
+          icon: BelarusNaft
+        });
+
+          // МКАД 28км слева
+          var BelNaft82 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.849215, lng: 27.625302},
+          icon: BelarusNaft
+        });
+
+          // пр-т Независимости д.152а
+          var BelNaft7 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.938596, lng: 27.672570},
+          icon: BelarusNaft
+        });
+
+          // МКАД 51км н.п. Цна-Йодково
+          var BelNaft75 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.970483, lng: 27.599654},
+          icon: BelarusNaft
+        });
+
+          // ул. Монтажников д.3
+          var BelNaft17 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.870974, lng: 27.419004},
+          icon: BelarusNaft
+        });
+
+          // пр-т Независимости д.156
+          var BelNaft49 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.940707, lng: 27.675102},
+          icon: BelarusNaft
+        });
+
+          // МКАД 44км слева
+          var BelNaft88 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.969238, lng: 27.497023},
+          icon: BelarusNaft
+        });
+
+          // P28, 10км 223043
+          var BelNaft21 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.979525, lng: 27.535756},
+          icon: BelarusNaft
+        });
+
+          // МКАД 34км слева
+          var BelNaft19 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.903177, lng: 27.406070},
+          icon: BelarusNaft
+        });
+
+          // МКАД а/д Минск-Гродна 11км справа М6
+          var BelNaft37 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.911960, lng: 27.398715},
+          icon: BelarusNaft
+        });
+
+          // P58 11км Дубовляны 223043
+          var BelNaft25 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.987856, lng: 27.535011},
+          icon: BelarusNaft
+        });
+
+          // Р1 12км Лецковщина
+          var BelNaft5 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.817718, lng: 27.428457},
+          icon: BelarusNaft
+        });
+
+          // пр-т Независимости д.200
+          var BelNaft45 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.952279, lng: 27.713077},
+          icon: BelarusNaft
+        });
+
+          // ул. Гурского д.22
+          var MinskOblGaz1 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.886470, lng: 27.480256},
+          icon: MinskOblGaz
+        });
+
+          // МКАД 13 км д. Подлосье
+          var MinskOblGaz2 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.838945, lng: 27.662204},
+          icon: MinskOblGaz
+        });
+
+          // ул. Чижевских д.109
+          var MinskGaz6 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.844339, lng: 27.586164},
+          icon: Minskgaz
+        });
+
+          // ул. Матусевича д.35а
+          var MinskGaz3 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.916254, lng: 27.457053},
+          icon: Minskgaz
+        });
+
+          // ул. Наполеона Орды д.10
+          var MinskGaz8 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.842398, lng: 27.480915},
+          icon: Minskgaz
+        });
+
+          // д. Озерцо Меньковский тракт
+          var MinskGaz2 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.849573, lng: 27.420698},
+          icon: Minskgaz
+        });
+
+          // д. Большой тростенец ул. Центральная
+          var MinskGaz1 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.853177, lng: 27.699742},
+          icon: Minskgaz
+        });
+
+          // ул. Бабушкина д.1а
+          var Gazprom30 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.822438, lng: 27.582333},
+          icon: Gazprom
+        });
+
+          // ул. Скорины д.19
+          var Gazprom40 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.925690, lng: 27.667514},
+          icon: Gazprom
+        });
+
+          // ул. Масюковщина д.1
+          var Gazprom50 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.936956, lng: 27.430512},
+          icon: Gazprom
+        });
+
+          // Меньковский тракт д.7
+          var Gazprom20 = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 53.848598, lng: 27.419856},
+          icon: Gazprom
+        });
+
+
+            var Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть</span><br/><span>Цена: 0,88</span>"
+            });
+            var Lucoil_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС ЛУКОЙЛ</span><br/><span>Цена: 0,88</span>"
+            });
+            var A100_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС A-100</span><br/><span>Цена: 0,88</span>"
+            });
+            var UC_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС United Company</span><br/><span>Цена: 0,88</span>"
+            });
+            var Gazprom_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АГНКС Газпром трансгаз Беларусь</span><br/><span>Цена: 0,88</span>"
+            });
+            var Minskoblgaz_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АГЗС Минскоблагаз</span><br/><span>Цена: 0,88</span>"
+            });
+            var Mingaz_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АГЗС Мингаз</span><br/><span>Цена: 0,88</span>"
+            });
+
+
+google.maps.event.addListener(UC_11, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();
+            UC_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС United Company №11</span><br/><span>Цена: 0,88</span>"
+            });
+            UC_price_InfoWindow.open(map,UC_11);
+        });
+google.maps.event.addListener(UC_1, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            UC_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС United Company №1</span><br/><span>Цена: 0,88</span>"
+            });
+            UC_price_InfoWindow.open(map,UC_1);
+        });
+google.maps.event.addListener(UC_2, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            UC_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС United Company №2</span><br/><span>Цена: 0,88</span>"
+            });
+            UC_price_InfoWindow.open(map,UC_2);
+        });
+google.maps.event.addListener(UC_9, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            UC_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС United Company №9</span><br/><span>Цена: 0,88</span>"
+            });
+            UC_price_InfoWindow.open(map,UC_9);
+        });
+google.maps.event.addListener(UC_3, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            UC_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС United Company №3</span><br/><span>Цена: 0,88</span>"
+            });
+            UC_price_InfoWindow.open(map,UC_3);
+        });
+google.maps.event.addListener(UC_7, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            UC_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС United Company №7</span><br/><span>Цена: 0,88</span>"
+            });
+            UC_price_InfoWindow.open(map,UC_7);
+        });
+google.maps.event.addListener(Lucoil4, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Lucoil_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС ЛУКОЙЛ №4</span><br/><span>Цена: 0,88</span>"
+            });
+            Lucoil_price_InfoWindow.open(map,Lucoil4);
+        });
+google.maps.event.addListener(Lucoil5, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Lucoil_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС ЛУКОЙЛ №5</span><br/><span>Цена: 0,88</span>"
+            });
+            Lucoil_price_InfoWindow.open(map,Lucoil5);
+        });
+google.maps.event.addListener(Lucoil67, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Lucoil_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС ЛУКОЙЛ №67</span><br/><span>Цена: 0,88</span>"
+            });
+            Lucoil_price_InfoWindow.open(map,Lucoil67);
+        });
+google.maps.event.addListener(Lucoil65, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Lucoil_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС ЛУКОЙЛ №65</span><br/><span>Цена: 0,88</span>"
+            });
+            Lucoil_price_InfoWindow.open(map,Lucoil65);
+        });
+google.maps.event.addListener(Lucoil64, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Lucoil_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС ЛУКОЙЛ №64</span><br/><span>Цена: 0,88</span>"
+            });
+            Lucoil_price_InfoWindow.open(map,Lucoil64);
+        });
+google.maps.event.addListener(Lucoil69, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Lucoil_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС ЛУКОЙЛ №69</span><br/><span>Цена: 0,88</span>"
+            });
+            Lucoil_price_InfoWindow.open(map,Lucoil69);
+        });
+google.maps.event.addListener(Lucoil61, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Lucoil_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС ЛУКОЙЛ №61</span><br/><span>Цена: 0,88</span>"
+            });
+            Lucoil_price_InfoWindow.open(map,Lucoil61);
+        });
+google.maps.event.addListener(A100_7, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            A100_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС A-100 №7</span><br/><span>Цена: 0,88</span>"
+            });
+            A100_price_InfoWindow.open(map,A100_7);
+        });
+google.maps.event.addListener(A100_6, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            A100_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС A-100 №6</span><br/><span>Цена: 0,88</span>"
+            });
+            A100_price_InfoWindow.open(map,A100_6);
+        });
+google.maps.event.addListener(A100_16, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            A100_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС A-100 №16</span><br/><span>Цена: 0,88</span>"
+            });
+            A100_price_InfoWindow.open(map,A100_16);
+        });
+google.maps.event.addListener(A100_15, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            A100_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС A-100 №15</span><br/><span>Цена: 0,88</span>"
+            });
+            A100_price_InfoWindow.open(map,A100_15);
+        });
+google.maps.event.addListener(A100_20, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            A100_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС A-100 №20</span><br/><span>Цена: 0,88</span>"
+            });
+            A100_price_InfoWindow.open(map,A100_20);
+        });
+google.maps.event.addListener(A100_2, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            A100_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС A-100 №2</span><br/><span>Цена: 0,88</span>"
+            });
+            A100_price_InfoWindow.open(map,A100_2);
+        });
+google.maps.event.addListener(A100_18, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            A100_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АЗС A-100 №18</span><br/><span>Цена: 0,88</span>"
+            });
+            A100_price_InfoWindow.open(map,A100_18);
+        });
+google.maps.event.addListener(BelNaft26, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №26</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft26);
+        });
+google.maps.event.addListener(BelNaft27, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №27</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft27);
+        });
+google.maps.event.addListener(BelNaft3, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №3</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft3);
+        });
+google.maps.event.addListener(BelNaft77, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №77</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft77);
+        });
+google.maps.event.addListener(BelNaft13, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №13</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft13);
+        });
+google.maps.event.addListener(BelNaft18, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №18</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft18);
+        });
+google.maps.event.addListener(BelNaft53, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №53</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft53);
+        });
+google.maps.event.addListener(BelNaft89, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №89</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft89);
+        });
+google.maps.event.addListener(BelNaft50, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №50</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft50);
+        });
+google.maps.event.addListener(BelNaft8, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №8</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft8);
+        });
+google.maps.event.addListener(BelNaft56, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №56</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft56);
+        });
+google.maps.event.addListener(BelNaft58, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №58</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft58);
+        });
+google.maps.event.addListener(BelNaft81, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №81</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft81);
+        });
+google.maps.event.addListener(BelNaft55, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №55</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft55);
+        });
+google.maps.event.addListener(BelNaft6, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №6</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft6);
+        });
+google.maps.event.addListener(BelNaft82, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №82</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft82);
+        });
+google.maps.event.addListener(BelNaft7, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №7</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft7);
+        });
+google.maps.event.addListener(BelNaft75, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №75</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft75);
+        });
+google.maps.event.addListener(BelNaft17, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №17</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft17);
+        });
+google.maps.event.addListener(BelNaft49, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №49</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft49);
+        });
+google.maps.event.addListener(BelNaft88, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №88</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft88);
+        });
+google.maps.event.addListener(BelNaft21, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №21</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft21);
+        });
+google.maps.event.addListener(BelNaft19, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №19</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft19);
+        });
+google.maps.event.addListener(BelNaft37, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №37</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft37);
+        });
+google.maps.event.addListener(BelNaft25, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №25</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft25);
+        });
+google.maps.event.addListener(BelNaft5, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №5</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft5);
+        });
+google.maps.event.addListener(BelNaft45, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Belnaft_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>МАЗС Беларуснефть №45</span><br/><span>Цена: 0,88</span>"
+            });
+            Belnaft_price_InfoWindow.open(map,BelNaft45);
+        });
+google.maps.event.addListener(MinskOblGaz1, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Minskoblgaz_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АГЗС Минскоблагаз №1</span><br/><span>Цена: 0,88</span>"
+            });
+            Minskoblgaz_price_InfoWindow.open(map,MinskOblGaz1);
+        });
+google.maps.event.addListener(MinskOblGaz2, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АГЗС Минскоблагаз №2</span><br/><span>Цена: 0,88</span>"
+            });  
+            Minskoblgaz_price_InfoWindow.open(map,MinskOblGaz2);
+        });
+google.maps.event.addListener(MinskGaz6, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АГЗС Мингаз №6</span><br/><span>Цена: 0,88</span>"
+            });
+            Mingaz_price_InfoWindow.open(map,MinskGaz6);
+        });
+google.maps.event.addListener(MinskGaz3, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АГЗС Мингаз №3</span><br/><span>Цена: 0,88</span>"
+            });
+            Mingaz_price_InfoWindow.open(map,MinskGaz3);
+        });
+google.maps.event.addListener(MinskGaz8, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АГЗС Мингаз №8</span><br/><span>Цена: 0,88</span>"
+            });
+            Mingaz_price_InfoWindow.open(map,MinskGaz8);
+        });
+google.maps.event.addListener(MinskGaz2, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АГЗС Мингаз №2</span><br/><span>Цена: 0,88</span>"
+            });
+            Mingaz_price_InfoWindow.open(map,MinskGaz2);
+        });
+google.maps.event.addListener(MinskGaz1, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АГЗС Мингаз №1</span><br/><span>Цена: 0,88</span>"
+            });
+            Mingaz_price_InfoWindow.open(map,MinskGaz1);
+        });
+google.maps.event.addListener(Gazprom30, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Gazprom_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АГНКС Газпром трансгаз Беларусь №3</span><br/><span>Цена: 0,88</span>"
+            });
+            Gazprom_price_InfoWindow.open(map,Gazprom30);
+        });
+google.maps.event.addListener(Gazprom40, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Gazprom_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АГНКС Газпром трансгаз Беларусь №4</span><br/><span>Цена: 0,88</span>"
+            });
+            Gazprom_price_InfoWindow.open(map,Gazprom40);
+        });
+google.maps.event.addListener(Gazprom50, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Gazprom_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АГНКС Газпром трансгаз Беларусь №5</span><br/><span>Цена: 0,88</span>"
+            });
+            Gazprom_price_InfoWindow.open(map,Gazprom50);
+        });
+google.maps.event.addListener(Gazprom20, 'click', function() {
+            Belnaft_price_InfoWindow.close();
+            A100_price_InfoWindow.close();
+            Lucoil_price_InfoWindow.close();
+            UC_price_InfoWindow.close();
+            Gazprom_price_InfoWindow.close();
+            Minskoblgaz_price_InfoWindow.close();  
+            Mingaz_price_InfoWindow.close();  
+            Gazprom_price_InfoWindow = new google.maps.InfoWindow({
+              content: "<span>АГНКС Газпром трансгаз Беларусь №2</span><br/><span>Цена: 0,88</span>"
+            });
+            Gazprom_price_InfoWindow.open(map,Gazprom20);
+        });
+    }
+
+    
+    </script> 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCLqBRpEB7S4kHr7wgRrwMbT0TxoOLGps&callback=initMap&libraries=geometry"
+        async defer></script>
+  </body>
+</html>

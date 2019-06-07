@@ -1,0 +1,73 @@
+﻿<Page x:Class="GasStationsApplication.Pages.ListOfGSPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GasStationsApplication.Pages"
+      xmlns:controls="clr-namespace:GasStationsApplication.Controls"
+      xmlns:materialDesgin="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ListOfGSPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Background="#FF5D5D5D">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0">
+                <TextBlock Style="{StaticResource DefaultTextStyle}" FontSize="18">Количество звёзд:</TextBlock>
+                <materialDesgin:RatingBar x:Name="GSRatingBar" ValueChanged="GSRatingBar_ValueChanged" Foreground="#FFFF7851" Value="5"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock HorizontalAlignment="Center" Style="{StaticResource DefaultTextStyle}" FontSize="18">Расстояние(км)</TextBlock>
+                <Slider x:Name="DistanceSlider" Minimum="0" Maximum="30" Foreground="#FFFF7851" Style="{StaticResource MaterialDesignDiscreteSlider}"
+                        ToolTip="MaterialDesignDiscreteSlider" Value="30" Width="180" Focusable="False" LargeChange="0" PreviewMouseUp="DistanceSlider_MouseUp"/>
+            </StackPanel>
+            <ScrollViewer Grid.Column="2" VerticalScrollBarVisibility="Auto">
+                <StackPanel Orientation="Vertical">
+                    <RadioButton x:Name="_All" Checked="FuelTypeRadioButton_Checked" Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" BorderBrush="#FFFF7851" IsChecked="True">
+                        <TextBlock Style="{StaticResource DefaultTextStyle}" Text="Все" FontSize="18"/>
+                    </RadioButton>
+                    <RadioButton x:Name="_92" Checked="FuelTypeRadioButton_Checked" Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" BorderBrush="#FFFF7851" IsChecked="False">
+                        <TextBlock Style="{StaticResource DefaultTextStyle}" Text="АИ92" FontSize="18"/>
+                    </RadioButton>
+                    <RadioButton x:Name="_95" Checked="FuelTypeRadioButton_Checked" Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" BorderBrush="#FFFF7851" IsChecked="False">
+                        <TextBlock Style="{StaticResource DefaultTextStyle}" Text="АИ95" FontSize="18"/>
+                    </RadioButton>
+                    <RadioButton x:Name="_98" Checked="FuelTypeRadioButton_Checked" Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" BorderBrush="#FFFF7851" IsChecked="False">
+                        <TextBlock Style="{StaticResource DefaultTextStyle}" Text="АИ98" FontSize="18"/>
+                    </RadioButton>
+                    <RadioButton x:Name="_DT" Checked="FuelTypeRadioButton_Checked" Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" BorderBrush="#FFFF7851" IsChecked="False">
+                        <TextBlock Style="{StaticResource DefaultTextStyle}" Text="Дизель" FontSize="18"/>
+                    </RadioButton>
+                    <RadioButton x:Name="_GAS" Checked="FuelTypeRadioButton_Checked" Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" BorderBrush="#FFFF7851" IsChecked="False">
+                        <TextBlock Style="{StaticResource DefaultTextStyle}" Text="Газ" FontSize="18"/>
+                    </RadioButton>
+                </StackPanel>
+            </ScrollViewer>
+            <Grid Grid.Row="1" Grid.ColumnSpan="3">
+                <Border Height="2" VerticalAlignment="Top" Background="#FFFF7851"/>
+                <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto">
+                    <StackPanel x:Name="CompaniesStackPanel" Orientation="Horizontal">
+                        <controls:CompanyRadioButton/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+            <Border Grid.Column="1" Background="#FFFF7851" Width="2" HorizontalAlignment="Right"/>
+            <Border Grid.Column="1" Background="#FFFF7851" Width="2" HorizontalAlignment="Left"/>
+        </Grid>
+        <ScrollViewer Background="White" VerticalScrollBarVisibility="Auto" Grid.Row="2">
+            <ListBox x:Name="FullGSList_listBox"/>
+        </ScrollViewer>
+    </Grid>
+</Page>
